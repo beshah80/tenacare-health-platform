@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TenaCare - Your trusted health companion in Ethiopia. Find local clinics, hospitals, and healthcare providers. Book appointments, access health education, and get region-specific health tips.">
+    <meta name="keywords" content="Ethiopian healthcare, local clinics, health education, appointment booking, traditional healers, Addis Ababa hospitals, Ethiopian doctors">
+    <title>TenaCare - Ethiopian Health & Wellness Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="#home" class="logo">
+                        <span class="logo-icon">🏥</span>
+                        <span class="logo-text">TenaCare</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="#search" class="nav-link">Find Care</a></li>
+                        <li class="nav-item"><a href="#education" class="nav-link">Health Education</a></li>
+                        <li class="nav-item"><a href="#providers" class="nav-link">Providers</a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="nav-actions">
+                    <button class="btn btn-secondary" id="emergencyBtn">Emergency</button>
+                    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Your Health Journey Starts with 
+                    <span class="gradient-text">TenaCare</span>
+                </h1>
+                <p class="hero-description">
+                    Connect with trusted healthcare providers across Ethiopia. Find clinics, hospitals, and traditional healers. 
+                    Access health education in your local language and book appointments with ease.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary" id="findCareBtn">Find Healthcare Provider</button>
+                    <button class="btn btn-outline" id="learnHealthBtn">Health Education</button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-target="150">0</span>
+                        <span class="stat-label">Healthcare Providers</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="25">0</span>
+                        <span class="stat-label">Cities Covered</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="5000">0</span>
+                        <span class="stat-label">Patients Served</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image">
+                    <div class="floating-card card-1">
+                        <div class="card-icon">👨‍⚕️</div>
+                        <div class="card-content">
+                            <h4>Dr. Abebe</h4>
+                            <p>Cardiologist</p>
+                        </div>
+                    </div>
+                    <div class="floating-card card-2">
+                        <div class="card-icon">🏥</div>
+                        <div class="card-content">
+                            <h4>Tikur Anbessa</h4>
+                            <p>Specialized Hospital</p>
+                        </div>
+                    </div>
+                    <div class="floating-card card-3">
+                        <div class="card-icon">🌿</div>
+                        <div class="card-content">
+                            <h4>Traditional Healing</h4>
+                            <p>Natural remedies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section id="search" class="search">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Find Healthcare Near You</h2>
+                <p class="section-subtitle">Search for clinics, hospitals, and healthcare providers in your area</p>
+            </div>
+            
+            <div class="search-container">
+                <div class="search-form">
+                    <div class="search-inputs">
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <select id="location" name="location">
+                                <option value="">Select your city/region</option>
+                                <option value="addis-ababa">Addis Ababa</option>
+                                <option value="dire-dawa">Dire Dawa</option>
+                                <option value="bahir-dar">Bahir Dar</option>
+                                <option value="gondar">Gondar</option>
+                                <option value="mekelle">Mekelle</option>
+                                <option value="hawassa">Hawassa</option>
+                                <option value="jimma">Jimma</option>
+                                <option value="harar">Harar</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="specialty">Specialty</label>
+                            <select id="specialty" name="specialty">
+                                <option value="">All specialties</option>
+                                <option value="cardiology">Cardiology</option>
+                                <option value="pediatrics">Pediatrics</option>
+                                <option value="obstetrics">Obstetrics & Gynecology</option>
+                                <option value="orthopedics">Orthopedics</option>
+                                <option value="dermatology">Dermatology</option>
+                                <option value="traditional">Traditional Medicine</option>
+                                <option value="general">General Practice</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="provider-type">Provider Type</label>
+                            <select id="provider-type" name="provider-type">
+                                <option value="">All types</option>
+                                <option value="hospital">Hospital</option>
+                                <option value="clinic">Clinic</option>
+                                <option value="pharmacy">Pharmacy</option>
+                                <option value="traditional">Traditional Healer</option>
+                                <option value="laboratory">Laboratory</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary search-btn" id="searchBtn">Search Providers</button>
+                </div>
+                
+                <div class="search-results" id="searchResults">
+                    <div class="result-card">
+                        <div class="result-header">
+                            <div class="provider-info">
+                                <h3>Tikur Anbessa Specialized Hospital</h3>
+                                <p class="provider-location">📍 Addis Ababa, Kolfe Keranio</p>
+                                <div class="provider-rating">
+                                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                                    <span class="rating-text">4.8 (156 reviews)</span>
+                                </div>
+                            </div>
+                            <div class="provider-type hospital">🏥 Hospital</div>
+                        </div>
+                        <div class="result-details">
+                            <p>Ethiopia's largest and most comprehensive hospital, offering specialized care in cardiology, oncology, and emergency medicine.</p>
+                            <div class="provider-specialties">
+                                <span class="specialty-tag">Cardiology</span>
+                                <span class="specialty-tag">Oncology</span>
+                                <span class="specialty-tag">Emergency</span>
+                                <span class="specialty-tag">Surgery</span>
+                            </div>
+                        </div>
+                        <div class="result-actions">
+                            <button class="btn btn-outline">View Details</button>
+                            <button class="btn btn-primary">Book Appointment</button>
+                        </div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="result-header">
+                            <div class="provider-info">
+                                <h3>Dr. Kidist Alemayehu - Pediatric Clinic</h3>
+                                <p class="provider-location">📍 Addis Ababa, Bole</p>
+                                <div class="provider-rating">
+                                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                                    <span class="rating-text">4.9 (89 reviews)</span>
+                                </div>
+                            </div>
+                            <div class="provider-type clinic">🏥 Clinic</div>
+                        </div>
+                        <div class="result-details">
+                            <p>Specialized pediatric care with over 15 years of experience. Child-friendly environment with modern medical equipment.</p>
+                            <div class="provider-specialties">
+                                <span class="specialty-tag">Pediatrics</span>
+                                <span class="specialty-tag">Vaccination</span>
+                                <span class="specialty-tag">Child Development</span>
+                            </div>
+                        </div>
+                        <div class="result-actions">
+                            <button class="btn btn-outline">View Details</button>
+                            <button class="btn btn-primary">Book Appointment</button>
+                        </div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="result-header">
+                            <div class="provider-info">
+                                <h3>Wegene Traditional Healing Center</h3>
+                                <p class="provider-location">📍 Dire Dawa, Kezira</p>
+                                <div class="provider-rating">
+                                    <span class="stars">⭐⭐⭐⭐</span>
+                                    <span class="rating-text">4.2 (67 reviews)</span>
+                                </div>
+                            </div>
+                            <div class="provider-type traditional">🌿 Traditional</div>
+                        </div>
+                        <div class="result-details">
+                            <p>Traditional Ethiopian healing practices using natural herbs and traditional medicine methods passed down through generations.</p>
+                            <div class="provider-specialties">
+                                <span class="specialty-tag">Herbal Medicine</span>
+                                <span class="specialty-tag">Traditional Healing</span>
+                                <span class="specialty-tag">Wellness</span>
+                            </div>
+                        </div>
+                        <div class="result-actions">
+                            <button class="btn btn-outline">View Details</button>
+                            <button class="btn btn-primary">Book Consultation</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Health Education</h2>
+                <p class="section-subtitle">Learn about health and wellness in your local language</p>
+            </div>
+            
+            <div class="education-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="amharic">Amharic</button>
+                    <button class="tab-btn" data-tab="oromiffa">Oromiffa</button>
+                    <button class="tab-btn" data-tab="tigrinya">Tigrinya</button>
+                    <button class="tab-btn" data-tab="english">English</button>
+                </div>
+                
+                <div class="tab-content">
+                    <div class="tab-pane active" id="amharic">
+                        <div class="education-content">
+                            <div class="education-text">
+                                <h3>የጤና ትምህርት - Health Education in Amharic</h3>
+                                <p>የጤና መረጃዎችን በአማርኛ ያግኙ። የተለያዩ የጤና ጉዳዮችን እና የመከላከያ ዘዴዎችን ያውቁ።</p>
+                                <div class="education-topics">
+                                    <div class="topic-item">
+                                        <h4>🏥 የስኳር በሽታ መከላከያ</h4>
+                                        <p>የስኳር በሽታ እንዴት እንደሚከላከል እና እንደሚያዘጋጅ ያውቁ።</p>
+                                    </div>
+                                    <div class="topic-item">
+                                        <h4>💊 የመድኃኒት አጠቃቀም</h4>
+                                        <p>መድኃኒት እንዴት እንደሚወሰድ እና የጥብቅ መመሪያዎች።</p>
+                                    </div>
+                                    <div class="topic-item">
+                                        <h4>🤱 የሴቶች ጤና</h4>
+                                        <p>የሴቶች ጤና እና የወሊድ እክል እንክብካቤ።</p>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary">የተሟላ መረጃ ያግኙ</button>
+                            </div>
+                            <div class="education-visual">
+                                <div class="education-image">
+                                    <div class="health-visual">
+                                        <div class="health-icon">📚</div>
+                                        <div class="health-text">የጤና ትምህርት</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="oromiffa">
+                        <div class="education-content">
+                            <div class="education-text">
+                                <h3>Barumsa Fayyaa - Health Education in Oromiffa</h3>
+                                <p>Odeeffannoo fayyaa afaan Oromoo tiin argadhaa. Beekumsa waliigalaa fayyaa qabanii.</p>
+                                <div class="education-topics">
+                                    <div class="topic-item">
+                                        <h4>🏥 Dhukkubni Sukkaraa</h4>
+                                        <p>Dhukkubni sukkaraa akkamitti ittiin hojjetamu beeku.</p>
+                                    </div>
+                                    <div class="topic-item">
+                                        <h4>💊 Fayyadama Daa'ima</h4>
+                                        <p>Daa'ima akkamitti fayyadamu fi qaallii isaa.</p>
+                                    </div>
+                                    <div class="topic-item">
+                                        <h4>🤱 Fayyaa Dubartii</h4>
+                                        <p>Fayyaa dubartii fi eeguu dhaloota.</p>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary">Odeeffannoo Guutuu Argadhaa</button>
+                            </div>
+                            <div class="education-visual">
+                                <div class="education-image">
+                                    <div class="health-visual">
+                                        <div class="health-icon">📚</div>
+                                        <div class="health-text">Barumsa Fayyaa</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="tigrinya">
+                        <div class="education-content">
+                            <div class="education-text">
+                                <h3>ስነ ጤና ትምህርቲ - Health Education in Tigrinya</h3>
+                                <p>ሓበሬታ ጥዕና ብትግርኛ ረኸብ። ሓፈሻዊ ሓበሬታ ጥዕና እውን እንተሃልዩ።</p>
+                                <div class="education-topics">
+                                    <div class="topic-item">
+                                        <h4>🏥 ሕማም ሽኮር</h4>
+                                        <p>ሕማም ሽኮር ከመይ ከም ዝሕንስ እንተሃልዩ።</p>
+                                    </div>
+                                    <div class="topic-item">
+                                        <h4>💊 ክንዲ መድሃኒት</h4>
+                                        <p>መድሃኒት ከመይ ከም ዝወሰድ እንተሃልዩ።</p>
+                                    </div>
+                                    <div class="topic-item">
+                                        <h4>🤱 ጥዕና ኣንስቲ</h4>
+                                        <p>ጥዕና ኣንስቲ እና ክንክን ወሊድ።</p>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary">ሓበሬታ ምሉእ ረኸብ</button>
+                            </div>
+                            <div class="education-visual">
+                                <div class="education-image">
+                                    <div class="health-visual">
+                                        <div class="health-icon">📚</div>
+                                        <div class="health-text">ስነ ጤና ትምህርቲ</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="english">
+                        <div class="education-content">
+                            <div class="education-text">
+                                <h3>Health Education in English</h3>
+                                <p>Access comprehensive health information in English. Learn about various health topics and preventive measures.</p>
+                                <div class="education-topics">
+                                    <div class="topic-item">
+                                        <h4>🏥 Diabetes Prevention</h4>
+                                        <p>Learn how to prevent and manage diabetes through lifestyle changes.</p>
+                                    </div>
+                                    <div class="topic-item">
+                                        <h4>💊 Medication Safety</h4>
+                                        <p>Understanding proper medication usage and safety guidelines.</p>
+                                    </div>
+                                    <div class="topic-item">
+                                        <h4>🤱 Women's Health</h4>
+                                        <p>Comprehensive women's health and maternal care information.</p>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary">Get Complete Information</button>
+                            </div>
+                            <div class="education-visual">
+                                <div class="education-image">
+                                    <div class="health-visual">
+                                        <div class="health-icon">📚</div>
+                                        <div class="health-text">Health Education</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Healthcare Providers Section -->
+    <section id="providers" class="providers">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Healthcare Providers</h2>
+                <p class="section-subtitle">Trusted medical professionals and facilities across Ethiopia</p>
+            </div>
+            
+            <div class="providers-grid">
+                <article class="provider-card" data-aos="fade-up">
+                    <div class="provider-image">
+                        <div class="provider-avatar">👨‍⚕️</div>
+                        <div class="provider-badge hospital">🏥 Hospital</div>
+                    </div>
+                    <div class="provider-info">
+                        <h3>Dr. Yohannes Tadesse</h3>
+                        <p class="provider-specialty">Cardiologist</p>
+                        <p class="provider-location">📍 Tikur Anbessa Hospital, Addis Ababa</p>
+                        <div class="provider-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span class="rating">4.9 (234 reviews)</span>
+                        </div>
+                        <p class="provider-description">Leading cardiologist with over 20 years of experience. Specializes in interventional cardiology and heart disease prevention.</p>
+                        <div class="provider-actions">
+                            <button class="btn btn-outline">View Profile</button>
+                            <button class="btn btn-primary">Book Appointment</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="provider-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="provider-image">
+                        <div class="provider-avatar">👩‍⚕️</div>
+                        <div class="provider-badge clinic">🏥 Clinic</div>
+                    </div>
+                    <div class="provider-info">
+                        <h3>Dr. Bethlehem Haile</h3>
+                        <p class="provider-specialty">Pediatrician</p>
+                        <p class="provider-location">📍 Children's Health Center, Dire Dawa</p>
+                        <div class="provider-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span class="rating">4.8 (156 reviews)</span>
+                        </div>
+                        <p class="provider-description">Dedicated pediatrician specializing in child development and vaccination programs. Over 15 years of experience.</p>
+                        <div class="provider-actions">
+                            <button class="btn btn-outline">View Profile</button>
+                            <button class="btn btn-primary">Book Appointment</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="provider-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="provider-image">
+                        <div class="provider-avatar">🌿</div>
+                        <div class="provider-badge traditional">🌿 Traditional</div>
+                    </div>
+                    <div class="provider-info">
+                        <h3>Mama Fatima Ahmed</h3>
+                        <p class="provider-specialty">Traditional Healer</p>
+                        <p class="provider-location">📍 Harar Traditional Medicine Center</p>
+                        <div class="provider-rating">
+                            <span class="stars">⭐⭐⭐⭐</span>
+                            <span class="rating">4.2 (89 reviews)</span>
+                        </div>
+                        <p class="provider-description">Respected traditional healer with 30 years of experience in herbal medicine and traditional Ethiopian healing practices.</p>
+                        <div class="provider-actions">
+                            <button class="btn btn-outline">View Profile</button>
+                            <button class="btn btn-primary">Book Consultation</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About TenaCare</h2>
+                    <p class="about-lead">
+                        TenaCare is Ethiopia's premier health and wellness platform, connecting patients with trusted healthcare providers 
+                        across the country. Founded in 2025, we've been bridging the gap between traditional and modern healthcare.
+                    </p>
+                    <p>
+                        Our mission is to make quality healthcare accessible to all Ethiopians, regardless of location or language. 
+                        We partner with hospitals, clinics, traditional healers, and healthcare professionals to provide comprehensive 
+                        care options that respect both modern medicine and traditional healing practices.
+                    </p>
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <span class="stat-number">150+</span>
+                            <span class="stat-label">Healthcare Partners</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="stat-number">25</span>
+                            <span class="stat-label">Cities Covered</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="stat-number">50,000+</span>
+                            <span class="stat-label">Patients Served</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <div class="member-avatar">👨‍⚕️</div>
+                            <h4>Dr. Abebe Kebede</h4>
+                            <p>Medical Director</p>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-avatar">👩‍💼</div>
+                            <h4>Kidist Mamo</h4>
+                            <p>Operations Manager</p>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-avatar">👨‍💻</div>
+                            <h4>Yared Teklu</h4>
+                            <p>Technology Lead</p>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-avatar">👩‍⚕️</div>
+                            <h4>Dr. Bethlehem</h4>
+                            <p>Health Education</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Have questions? We're here to help with your healthcare needs.</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h4>Visit Us</h4>
+                            <p>Bole Road, Addis Ababa<br>Ethiopia</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h4>Email Us</h4>
+                            <p>info@tenacare.et<br>support@tenacare.et</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h4>Call Us</h4>
+                            <p>+251 911 123 456<br>Mon-Fri 8AM-6PM EAT</p>
+                        </div>
+                    </div>
+                    <div class="contact-item emergency">
+                        <div class="contact-icon">🚨</div>
+                        <div class="contact-details">
+                            <h4>Emergency</h4>
+                            <p>907 - Emergency Services<br>Available 24/7</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="inquiry">Inquiry Type</label>
+                        <select id="inquiry" name="inquiry">
+                            <option value="">Select inquiry type</option>
+                            <option value="appointment">Appointment Booking</option>
+                            <option value="provider">Provider Information</option>
+                            <option value="education">Health Education</option>
+                            <option value="support">Technical Support</option>
+                            <option value="feedback">Feedback</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🏥</span>
+                        <span class="logo-text">TenaCare</span>
+                    </div>
+                    <p>Your trusted health companion in Ethiopia. Connecting patients with quality healthcare providers.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Instagram</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Healthcare Services</h4>
+                    <ul>
+                        <li><a href="#search">Find Providers</a></li>
+                        <li><a href="#providers">Featured Doctors</a></li>
+                        <li><a href="#education">Health Education</a></li>
+                        <li><a href="#emergency">Emergency Services</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Locations</h4>
+                    <ul>
+                        <li><a href="#search">Addis Ababa</a></li>
+                        <li><a href="#search">Dire Dawa</a></li>
+                        <li><a href="#search">Bahir Dar</a></li>
+                        <li><a href="#search">Gondar</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#about">About TenaCare</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 TenaCare. All rights reserved. | የጤና እንክብካቤ ለሁሉም ኢትዮጵያውያን</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Emergency Modal -->
+    <div class="modal" id="emergencyModal">
+        <div class="modal-content emergency-modal">
+            <div class="modal-header">
+                <h3>🚨 Emergency Services</h3>
+                <button class="modal-close" id="emergencyModalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="emergency-info">
+                    <h4>Emergency Numbers</h4>
+                    <div class="emergency-numbers">
+                        <div class="emergency-number">
+                            <span class="number">907</span>
+                            <span class="label">General Emergency</span>
+                        </div>
+                        <div class="emergency-number">
+                            <span class="number">+251 911 123 456</span>
+                            <span class="label">TenaCare Emergency</span>
+                        </div>
+                        <div class="emergency-number">
+                            <span class="number">+251 911 789 012</span>
+                            <span class="label">Ambulance Service</span>
+                        </div>
+                    </div>
+                    <div class="emergency-locations">
+                        <h4>Nearest Emergency Centers</h4>
+                        <ul>
+                            <li>📍 Tikur Anbessa Hospital - Addis Ababa</li>
+                            <li>📍 Black Lion Hospital - Addis Ababa</li>
+                            <li>📍 St. Paul's Hospital - Addis Ababa</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Navigation functionality
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling for all navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animated counter for statistics
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current);
+            }, 20);
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                    
+                    // Animate counters
+                    const counters = entry.target.querySelectorAll('.stat-number');
+                    counters.forEach(counter => {
+                        const target = parseInt(counter.getAttribute('data-target'));
+                        animateCounter(counter, target);
+                    });
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.hero-stats, .provider-card, .about-stats').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Tab functionality
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabPanes = document.querySelectorAll('.tab-pane');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetTab = button.getAttribute('data-tab');
+                
+                // Remove active class from all buttons and panes
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabPanes.forEach(pane => pane.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding pane
+                button.classList.add('active');
+                document.getElementById(targetTab).classList.add('active');
+            });
+        });
+
+        // Emergency modal functionality
+        const emergencyBtn = document.getElementById('emergencyBtn');
+        const emergencyModal = document.getElementById('emergencyModal');
+        const emergencyModalClose = document.getElementById('emergencyModalClose');
+
+        emergencyBtn.addEventListener('click', () => {
+            emergencyModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        emergencyModalClose.addEventListener('click', () => {
+            emergencyModal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        // Close modal when clicking outside
+        emergencyModal.addEventListener('click', (e) => {
+            if (e.target === emergencyModal) {
+                emergencyModal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Search functionality
+        const searchBtn = document.getElementById('searchBtn');
+        const searchResults = document.getElementById('searchResults');
+
+        searchBtn.addEventListener('click', () => {
+            // Simulate search functionality
+            searchResults.style.display = 'block';
+            searchResults.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Form handling
+        const contactForm = document.getElementById('contactForm');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Simulate form submission
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                alert('Thank you for your message! We\'ll get back to you soon.');
+                contactForm.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+
+        // Floating cards animation
+        const floatingCards = document.querySelectorAll('.floating-card');
+        
+        floatingCards.forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.2}s`;
+        });
+
+        // Parallax effect for hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.hero-visual');
+            if (parallax) {
+                const speed = scrolled * 0.5;
+                parallax.style.transform = `translateY(${speed}px)`;
+            }
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Provider card hover effects
+        document.querySelectorAll('.provider-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-10px)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Initialize animations on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Trigger initial animations
+            setTimeout(() => {
+                document.querySelector('.hero-content').classList.add('animate');
+            }, 500);
+        });
+    </script>
+</body>
+</html> 
